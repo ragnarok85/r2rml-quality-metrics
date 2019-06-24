@@ -1,4 +1,4 @@
-#R2RML Quality Metrics for Luzzu
+# R2RML Quality Metrics for Luzzu
 
 This project provides a number of metrics available to assess the quality of R2RML mappings.
 
