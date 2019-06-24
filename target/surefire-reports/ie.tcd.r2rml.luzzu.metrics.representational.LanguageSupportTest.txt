@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ie.tcd.r2rml.luzzu.metrics.representational.LanguageSupportTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.82 sec

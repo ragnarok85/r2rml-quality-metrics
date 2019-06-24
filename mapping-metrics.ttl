@@ -1,0 +1,39 @@
+@prefix daq:     <http://purl.org/eis/vocab/daq#> .
+@prefix dqm:     <http://purl.org/eis/vocab/dqm#> .
+@prefix owl:	 <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfg:	 <http://www.w3.org/2004/03/trix/rdfg-1> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix qpro:     <http://purl.org/eis/vocab/qpro#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dct:  <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+dqm:UndefinedClassesMetric
+	a	rdfs:Class ;
+	rdfs:subClassOf	daq:Metric ;
+	daq:expectedDataType xsd:double ;
+	rdfs:comment	"Detects undefined classes " ;
+	rdfs:label	"Undefined classes metric" .
+
+dqm:hasUndefinedClassesMetric
+	a	rdf:Property ;
+	rdfs:subPropertyOf	daq:hasMetric ;
+	rdfs:domain	dqm:Interpretability ;
+	rdfs:range	dqm:UndefinedClassesMetric .
+
+dqm:UndefinedPropertiesMetric
+	a	rdfs:Class ;
+	rdfs:subClassOf	daq:Metric ;
+	daq:expectedDataType xsd:double ;
+	rdfs:comment	"Detects undefined properties " ;
+	rdfs:label	"Undefined properties metric" .
+
+dqm:hasUndefinedPropertiesMetric
+	a	rdf:Property ;
+	rdfs:subPropertyOf	daq:hasMetric ;
+	rdfs:domain	dqm:Interpretability ;
+	rdfs:range	dqm:UndefinedPropertiesMetric .
