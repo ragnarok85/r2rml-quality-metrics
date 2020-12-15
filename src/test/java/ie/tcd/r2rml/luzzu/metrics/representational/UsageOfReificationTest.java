@@ -13,6 +13,7 @@ import io.github.luzzu.datatypes.r2rml.R2RMLMapping;
 import io.github.luzzu.datatypes.r2rml.R2RMLMappingFactory;
 import io.github.luzzu.exceptions.BeforeException;
 import io.github.luzzu.exceptions.MetricProcessingException;
+import io.github.luzzu.datatypes.r2rml.R2RMLException;
 import io.github.luzzu.linkeddata.qualitymetrics.commons.TestLoader;
 
 public class UsageOfReificationTest {
@@ -30,7 +31,7 @@ public class UsageOfReificationTest {
 	}
 
 	@Test
-	public void reificationUsageReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException {
+	public void reificationUsageReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -39,7 +40,7 @@ public class UsageOfReificationTest {
 	}
 
 	@Test
-	public void withARDFStatementAndANonReificationPropertyTest() throws BeforeException, MetricProcessingException {
+	public void withARDFStatementAndANonReificationPropertyTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -49,7 +50,7 @@ public class UsageOfReificationTest {
 	}
 
 	@Test
-	public void withARDFStatementAndRDFPropertiesTest() throws BeforeException, MetricProcessingException {
+	public void withARDFStatementAndRDFPropertiesTest() throws BeforeException, MetricProcessingException, R2RMLException{
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file2)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -59,7 +60,7 @@ public class UsageOfReificationTest {
 	}
 
 	@Test
-	public void withoutReificationTest() throws BeforeException, MetricProcessingException {
+	public void withoutReificationTest() throws BeforeException, MetricProcessingException,R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file3)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);

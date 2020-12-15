@@ -12,6 +12,7 @@ import org.junit.Test;
 import io.github.luzzu.datatypes.r2rml.R2RMLMapping;
 import io.github.luzzu.datatypes.r2rml.R2RMLMappingFactory;
 import io.github.luzzu.exceptions.BeforeException;
+import io.github.luzzu.datatypes.r2rml.R2RMLException;
 import io.github.luzzu.exceptions.MetricProcessingException;
 import io.github.luzzu.linkeddata.qualitymetrics.commons.TestLoader;
 
@@ -32,7 +33,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -41,7 +42,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -55,7 +56,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesWithTwoFilesTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesWithTwoFilesTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file2)));
 		Object[] args = new Object[] { mappings };
@@ -68,7 +69,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesWithDefinedClassTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesWithDefinedClassTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file3)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -80,7 +81,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesWithTwoUndefinedClassesTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesWithTwoUndefinedClassesTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file4)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -94,7 +95,7 @@ public class UsageOfUndefinedClassesTest {
 	}
 
 	@Test
-	public void undefinedClassesWithTwoTriplesMapsWithOneClassEachTest() throws BeforeException, MetricProcessingException {
+	public void undefinedClassesWithTwoTriplesMapsWithOneClassEachTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file5)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);

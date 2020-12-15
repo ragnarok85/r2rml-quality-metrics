@@ -12,6 +12,7 @@ import org.junit.Test;
 import io.github.luzzu.datatypes.r2rml.R2RMLMapping;
 import io.github.luzzu.datatypes.r2rml.R2RMLMappingFactory;
 import io.github.luzzu.exceptions.BeforeException;
+import io.github.luzzu.datatypes.r2rml.R2RMLException;
 import io.github.luzzu.exceptions.MetricProcessingException;
 import io.github.luzzu.linkeddata.qualitymetrics.commons.TestLoader;
 
@@ -31,7 +32,7 @@ public class UsageOfUndefinedPropertiesTest {
 	}
 
 	@Test
-	public void undefinedPropetyReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException {
+	public void undefinedPropetyReadingR2RMLMappingTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -40,7 +41,7 @@ public class UsageOfUndefinedPropertiesTest {
 	}
 
 	@Test
-	public void withOneUndefinedPropertyTest() throws BeforeException, MetricProcessingException {
+	public void withOneUndefinedPropertyTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file1)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -50,7 +51,7 @@ public class UsageOfUndefinedPropertiesTest {
 	}
 
 	@Test
-	public void withOneDefinedAndOneUndefinedPropertyTest() throws BeforeException, MetricProcessingException {
+	public void withOneDefinedAndOneUndefinedPropertyTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file2)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -60,7 +61,7 @@ public class UsageOfUndefinedPropertiesTest {
 	}
 
 	@Test
-	public void withTwoDefinedPropertiesTest() throws BeforeException, MetricProcessingException {
+	public void withTwoDefinedPropertiesTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file3)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
@@ -70,7 +71,7 @@ public class UsageOfUndefinedPropertiesTest {
 	}
 
 	@Test
-	public void withTwoDefinedPropertiesInTwoTriplesMapsTest() throws BeforeException, MetricProcessingException {
+	public void withTwoDefinedPropertiesInTwoTriplesMapsTest() throws BeforeException, MetricProcessingException, R2RMLException {
 		mappings.add(R2RMLMappingFactory.createR2RMLMappingFromModel(ModelFactory.createDefaultModel().read(file4)));
 		Object[] args = new Object[] { mappings };
 		metric.before(args);
