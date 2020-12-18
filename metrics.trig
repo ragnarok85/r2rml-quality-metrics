@@ -6,27 +6,27 @@
 @prefix dqm:     <http://purl.org/eis/vocab/dqm#> .
 
 _:LanguageSupport a lmi:LuzzuMetricJavaImplementation ;
-	rdfs:label "Usage of Multiple Languages" ;
+	rdfs:label "R2RML - Usage of Multiple Languages" ;
 	lmi:javaPackageName "ie.tcd.r2rml.luzzu.metrics.representational.LanguageSupport" ;
 	lmi:referTo dqm:MultipleLanguageUsageMetric .
 
 _:NoBlankNodeUsage a lmi:LuzzuMetricJavaImplementation ;
-	rdfs:label "Usage of Blank Nodes" ;
+	rdfs:label "R2RML - Usage of Blank Nodes" ;
 	lmi:javaPackageName "ie.tcd.r2rml.luzzu.metrics.representational.UsageOfBlankNodes" ;
 	lmi:referTo dqm:NoBlankNodeMetric .
 
 _:NoProlixRDF a lmi:LuzzuMetricJavaImplementation ;
-	rdfs:label "No Prolix RDF" ;
+	rdfs:label "R2RML - No Prolix RDF" ;
 	lmi:javaPackageName "ie.tcd.r2rml.luzzu.metrics.representational.UsageOfReification" ;
 	lmi:referTo dqm:NoProlixRDFMetric .
 
 _:UndefinedClasses a lmi:LuzzuMetricJavaImplementation ;
-	rdfs:label "Undefined Classes" ;
+	rdfs:label "R2RML - Undefined Classes" ;
 	lmi:javaPackageName "ie.tcd.r2rml.luzzu.metrics.representational.UsageOfUndefinedClasses" ;
 	lmi:referTo dqm:UndefinedClassesMetric .
 
 _:UndefinedProperties a lmi:LuzzuMetricJavaImplementation ;
-	rdfs:label "Undefined Classes" ;
+	rdfs:label "R2RML - Undefined Classes" ;
 	lmi:javaPackageName "ie.tcd.r2rml.luzzu.metrics.representational.UsageOfUndefinedProperties" ;
 	lmi:referTo dqm:UndefinedPropertiesMetric .
 
